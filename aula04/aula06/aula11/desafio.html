@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da aula 11</title>
+</head>
+<body>
+    <h1>Sistemas de Nacionalidade</h1>
+    Digite o nome do pais <input type="text" name = "txtnome" id = "txtnome">
+    <input type="button" value="Verificar" onclick="ver()">
+    <div id = "res"></div>
+
+    <script>
+        function ver(){
+            var txtn = window.document.querySelector('input#txtnome')
+            res = window.document.querySelector('div#res')
+            var vel = txtn.value
+            res.innerHTML = ` <p> voce e <strong>${vel} </strong> </p>`
+
+            if (vel == 'mocambique') {
+                res.innerHTML = ` <p> voce eh mocambicano </p>`
+                
+            } else {
+                res.innerHTML = ` <p> voce eh estrangeiro </p>`
+            }
+        }
+    </script>
+</body>
+</html>
